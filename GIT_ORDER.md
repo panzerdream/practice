@@ -98,4 +98,14 @@ git checkout HEAD^ -- 恢复的文件名
 
 ## github的使用
 
+首先在github上注册一个账号，
+
+然后在本地建立一个你想要存储密钥的路径，在文件夹内执行代码```ssh-keygen -t rsa -C "邮箱地址"```，建立一个ssh的key
+
+然后所有可选项都可以都直接回车设置默认值
+
+然后id_rsa,id_rsa.pub就会自动添加到刚才所选的文件夹中了
+
+接着在github上添加公钥，把id_rsa.pub文件的内容复制到“setting-SSH and GPG keys-SSH keys”，按照界面要求即可
+
 

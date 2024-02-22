@@ -78,6 +78,23 @@ git checkout HEAD^ -- 恢复的文件名
 
 其实这个，命令的本质是将文件恢复到之前跟踪的状态，HEAD一次即恢复到头（上一次），加上一个“^”即恢复到上一次的上一次，其实可以依次递增。
 
+```git reset --hard id```是用来回滚的代码，id替换为所需要回滚到的版本号的id哈希值，或者使用```git reset --hard HEAd^```指令用来快速回滚到我们仓库的上一个版本，如果明确知道所需要回滚的是几个版本之前，则使用```git reset --hard HEAD~n```来表示具体回滚到之前n的版本
+
+使用```git log```命令查看版本变动信息是，可以使用```git log --pretty=oneline```选项简洁输出
+
+对于某单个文件，可以使用```git log filename```指令针对单个文件查看其更改过的版本提交修改信息。
+
+```git reflog```用于查看当前版本库的提交历史，所有对仓库版本的迭代都会出现在这里面，包括回滚版本
+
+### git创建分支，合并分支
+
+使用```git checkout -b name```创建一个分支， 使用```git branch```查看当前处于哪个分支，使用```git checkout main```切换到main分支
+
+使用```git merge```合并分支的语法是，在主分支执行```git merge dev```把dev分支合并到main分支中
+
+使用```git branch -a```可以查看当前所有分支
+
+使用```git branch -D name```可以删除名为name的分支
 
 ## github的使用
 
